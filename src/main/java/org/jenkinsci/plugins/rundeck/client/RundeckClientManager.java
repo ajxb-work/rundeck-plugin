@@ -66,6 +66,12 @@ public class RundeckClientManager implements RundeckManager {
                 builder.insecureSSL(true);
             }
 
+            builder.timeout((long)300000);
+            builder.readTimeout((long)300000);
+            builder.writeTimeout((long)300000);
+            builder.connectTimeout((long)300000);
+            builder.callTimeout((long)300000);
+
             client = builder.build();
         }
 
